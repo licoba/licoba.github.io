@@ -16,8 +16,8 @@
 * Ruby版本：2.4.4
 * 笔记中碰到的问题见文末
 
-# 环境准备
-## 一、安装Ruby
+## 环境准备
+### 一、安装Ruby
 Ruby官方网站：http://www.ruby-lang.org/zh_cn/
 
 在Windows下，可以使用**RubyInstall**来安装Ruby环境
@@ -25,26 +25,26 @@ Ruby官方网站：http://www.ruby-lang.org/zh_cn/
 下载包含**Devkit**的RubyInstall_64位版本，并安装
 
 是否安装完成？`ruby -v`
-## 二、安装Git
+### 二、安装Git
 本步略过
 
-## 三、安装Jekyll
+### 三、安装Jekyll
 Jekyll官方网站：https://www.jekyll.com.cn/
 ```
 gem install jekyll
 ```
 是否安装成功？`jekyll -v`
-## 四、在GitHub创建仓库
+### 四、在GitHub创建仓库
 仓库名格式为：`username@github.io`
 
-## 五、Clone仓库到本地
+### 五、Clone仓库到本地
 ```
 git clone https://github.com/licoba/licoba.github.io.git
 ```
-## 六、下载并使用主题
+### 六、下载并使用主题
 主题官网：http://jekyllthemes.org/
 
-## 七、Push到GitHub
+### 七、Push到GitHub
 ```
 git add .
 git commit -m"My Push"
@@ -52,7 +52,7 @@ git push
 ```
 
 
-一些问题
+## 一些问题
 ---
 ### gem下载慢or无法下载？
 替换gem源：https://gems.ruby-china.com/
