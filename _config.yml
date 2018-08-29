@@ -8,8 +8,8 @@ title: NexT
 subtitle:
 description:
 author: John Doe
-# Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
-language: 
+# 支持的语言: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
+language: zh-Hans
 date_format: '%Y-%m-%d'
 
 # URL
