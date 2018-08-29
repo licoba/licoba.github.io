@@ -1,9 +1,13 @@
 
 ## 博客框架
-Jekyll
+[Jekyll](https://www.jekyll.com.cn/)
 
 ## 博客主题
-nexT
+[nexT](http://theme-next.simpleyyt.com/)
+
+## 主题配置
+* [基本配置](http://theme-next.simpleyyt.com/getting-started.html)
+* [高级配置](http://theme-next.simpleyyt.com/theme-settings.html)
 
 ---
 # Window 搭建过程
