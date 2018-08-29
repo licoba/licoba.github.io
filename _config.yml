@@ -233,7 +233,9 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-#avatar:
+
+//头像设置
+avatar:https://image.licoba.top/head_qq.jpg
 
 
 # Table Of Contents in the Sidebar
