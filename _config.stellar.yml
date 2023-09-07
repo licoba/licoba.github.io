@@ -1,0 +1,15 @@
+# 在这个文件中的配置信息优先级高于主题文件夹中的配置文件。
+sidebar:
+  logo:
+    title: "八八"
+  # 主导航栏
+  menu:
+    post: "[btn.blog](/)"
+    wiki: "[btn.wiki](/wiki/)"
+    notes: "[笔记](/notes/)"
+    more: "[更多](/more/)"
+# 评论插件
+comments:
+  service: beaudar
+  beaudar:
+    repo: licoba/blog-comments
