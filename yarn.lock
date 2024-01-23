@@ -701,10 +701,10 @@ hexo-theme-landscape@^1.0.0:
   resolved "https://registry.npmjs.org/hexo-theme-landscape/-/hexo-theme-landscape-1.0.0.tgz"
   integrity sha512-bWQJWMqQI78wWiJPQZq5pJBH20TM442ShCaHGRetuEgMraxH0OKxB3NTupJzNEkzEk8DV2yrdizkXdKN6i501A==
 
-hexo-theme-stellar@^1.26.2:
-  version "1.26.2"
-  resolved "https://registry.yarnpkg.com/hexo-theme-stellar/-/hexo-theme-stellar-1.26.2.tgz#4102c994d962bcdb41161984f52955a6c666a93b"
-  integrity sha512-Srjd8aOgwVQSpGqFgspBsls434tThTZFpLgcX/UmDtRvLgFt+pG+kOn72T7fmfchoFFHDsmMn2JhEizPZUh1zQ==
+hexo-theme-stellar@^1.26.3:
+  version "1.26.3"
+  resolved "https://registry.yarnpkg.com/hexo-theme-stellar/-/hexo-theme-stellar-1.26.3.tgz#2ce67655526d3ae58ba1d063ccde85091ae903b9"
+  integrity sha512-bOtxjxWb8LJYXahHQKz7xlImXSfP0czBJ80HC4uih3fbr20b/96B1J75Hy69vhgmdxZ2kau0R1o2+Kl4yQQ/qQ==
   dependencies:
     hexo-renderer-ejs "^2.0.0"
     hexo-renderer-stylus "^3.0.1"
