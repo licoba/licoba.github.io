@@ -1,19 +1,32 @@
 # HexoSource
 
-> GitHub 的 Hexo 博客源码
+> GitHub 的 Hexo 博客的源码，licoba.github.io
 
 ## 安装 Hexo
 
 参考中文官网：https://hexo.io/zh-cn/
 
+
+## 本地部署
 在终端执行命令
 
 ```
 npm install hexo-cli -g
-hexo init blog
-cd blog
+git clone https://github.com/licoba/licoba.github.io
+cd licoba.github.io
 npm install
 hexo server
+```
+就可以在本地看到了效果了
+
+
+## 部署到Github Pages
+
+执行命令
+
+```
+cd licoba.github.io
+hexo g -d
 ```
 
 ## 主题
@@ -45,14 +58,7 @@ git submodule add https://github.com/ChrAlpha/hexo-theme-cards.git themes/cards
 git submodule add https://github.com/TriDiamond/hexo-theme-obsidian.git themes/obsidian
 ```
 
-## 部署
 
-执行命令
-
-```
-cd hexo
-hexo g -d
-```
 
 ## 站点
 
