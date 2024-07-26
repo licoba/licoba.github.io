@@ -13,3 +13,7 @@ comments:
   service: beaudar
   beaudar:
     repo: licoba/blog-comments
+article:
+  auto_cover: false #自动生成封面
+  type: tech # tech/story   tech: 默认技术类文章, story: 图文类文章，文字和段落间增距大。
+
