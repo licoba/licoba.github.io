@@ -47,7 +47,7 @@ Java里面的引用分为四个：强引用、软引用、弱引用、虚引用
 
 ### 1、标记-清除算法
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/365981/1650269738184-bdaad9e5-d38f-4f63-86df-d1f13a7dd61b.png#averageHue=%23eaebec&clientId=u1ba2e76d-b1d9-4&from=paste&height=403&id=ua6a47527&originHeight=806&originWidth=1986&originalType=binary&ratio=1&rotation=0&showTitle=false&size=589823&status=done&style=none&taskId=u490c04b7-2eae-4283-9438-3637225ecf0&title=&width=993)
+![image.png](https://pic.imgdb.cn/item/66d1a086d9c307b7e9af164c.png)
 
 标记-清除算法就是基于上面所说的，判定对象是否可回收的标记。这个 **基础** 的算法，有两个缺点：
 
@@ -57,7 +57,7 @@ Java里面的引用分为四个：强引用、软引用、弱引用、虚引用
 
 ### 2、标记-复制算法
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/365981/1650269743348-88649006-7e09-4cb6-b064-55c80f9300ff.png#averageHue=%23eaebec&clientId=u1ba2e76d-b1d9-4&from=paste&height=377&id=u7cad11ff&originHeight=754&originWidth=1816&originalType=binary&ratio=1&rotation=0&showTitle=false&size=625649&status=done&style=none&taskId=u012f693a-0e45-43d9-a5b3-64416740831&title=&width=908)
+![](https://pic.imgdb.cn/item/66d1a0a9d9c307b7e9af7c2a.png)
 
 将空间分为两片，一片用来回收，回收的时候将依然存活的对象，复制到另外一块上面去。
 
@@ -73,7 +73,7 @@ Java里面的引用分为四个：强引用、软引用、弱引用、虚引用
 
 ### 3、标记-整理算法
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/365981/1650269748305-a99ab339-08ac-4fae-940f-e5b2e9c6884e.png#averageHue=%23e8e9e9&clientId=u1ba2e76d-b1d9-4&from=paste&height=393&id=ubadbe555&originHeight=786&originWidth=1866&originalType=binary&ratio=1&rotation=0&showTitle=false&size=542132&status=done&style=none&taskId=ufd20bd18-ab61-4843-a06d-a42e7f18fb3&title=&width=933)
+![](https://pic.imgdb.cn/item/66d1a0cbd9c307b7e9afc937.png)
 
 和标记-清除算法的区别就是，这个是移动式的算法，在垃圾回收后，会将存活对象往前移动，然后一次性清理这个区域之外的内存。
 
@@ -95,8 +95,7 @@ Java里面的引用分为四个：强引用、软引用、弱引用、虚引用
 ### 新生代区域比例？
 Eden：Survivor from：Survivor ro = 8:1:1
 新生代：老年代 = 1:2，也就是说，新生代占整个堆内存的1/3，而老年代占整个堆内存的2/3。
-### ![](https://cdn.nlark.com/yuque/0/2022/webp/365981/1650300402472-b7063968-2ea4-46da-b46e-5aa3fa2d532f.webp#averageHue=%23e6deb6&clientId=u5ef74176-415e-4&from=paste&id=u41692bd0&originHeight=229&originWidth=927&originalType=url&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=ubf4c956a-317b-442f-b61b-6a21614dcd2&title=)
-### 怎么选用分代回收算法？
+### ![](https://pic.imgdb.cn/item/66d1a0e1d9c307b7e9b00885.png)
 
 - 在新生代，采用标记-复制算法效率比较高，因为很多对象存活时间都非常短
 - 在老年代，采用标记-整理算法效率比较高，因为没有额外的空间对老年代的对象做担保了。
