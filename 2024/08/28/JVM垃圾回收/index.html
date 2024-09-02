@@ -17,13 +17,13 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>八八</title>
+  <title>JVM - 八八</title>
 
   
     <meta name="description" content="JVM垃圾回收什么情况会导致内存泄露？总的来说，长生命周期的对象（如单例）持有短生命周期对象的引用，导致短生命周期对象无法被回收。 怎么判断一个对象死亡？一个对象死亡，也就意味着，它不能再通过任何途径被使用。 一、引用计数法添加一个计数器，用来统计对象的引用数量，每当有一个地方引用这个对象的时候，计数器就加一，失去引用时，计数器就减一。 缺点：A引用了B，B引用了A，这样会有循环引用的问题。 JV">
 <meta property="og:type" content="article">
-<meta property="og:title" content="八八">
-<meta property="og:url" content="http://example.com/2024/08/30/JVM%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/index.html">
+<meta property="og:title" content="JVM">
+<meta property="og:url" content="https://licoba.github.io/2024/08/28/JVM%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/index.html">
 <meta property="og:site_name" content="八八">
 <meta property="og:description" content="JVM垃圾回收什么情况会导致内存泄露？总的来说，长生命周期的对象（如单例）持有短生命周期对象的引用，导致短生命周期对象无法被回收。 怎么判断一个对象死亡？一个对象死亡，也就意味着，它不能再通过任何途径被使用。 一、引用计数法添加一个计数器，用来统计对象的引用数量，每当有一个地方引用这个对象的时候，计数器就加一，失去引用时，计数器就减一。 缺点：A引用了B，B引用了A，这样会有循环引用的问题。 JV">
 <meta property="og:locale" content="zh_CN">
@@ -31,15 +31,17 @@
 <meta property="og:image" content="https://pic.imgdb.cn/item/66d1a0a9d9c307b7e9af7c2a.png">
 <meta property="og:image" content="https://pic.imgdb.cn/item/66d1a0cbd9c307b7e9afc937.png">
 <meta property="og:image" content="https://pic.imgdb.cn/item/66d1a0e1d9c307b7e9b00885.png">
-<meta property="article:published_time" content="2024-08-30T09:39:14.302Z">
-<meta property="article:modified_time" content="2024-08-30T10:38:07.718Z">
+<meta property="article:published_time" content="2024-08-28T13:41:14.000Z">
+<meta property="article:modified_time" content="2024-08-30T11:00:31.346Z">
 <meta property="article:author" content="licoba">
+<meta property="article:tag" content="JVM">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://pic.imgdb.cn/item/66d1a086d9c307b7e9af164c.png">
   
   
   
-  
+  <meta name="keywords" content="JVM,Java">
 
   <!-- feed -->
   
@@ -68,7 +70,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/30/%E6%B5%8B%E8%AF%95-md/"><span class="title">测试.md</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2021/08/28/%E4%B8%AA%E4%BA%BA%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%95%B4%E7%90%86/"><span class="title">个人常用软件整理</span></a><a class="item title" href="/2024/08/28/JVM%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/"><span class="title">JVM</span></a><a class="item title" href="/2021/08/28/Java%E9%87%8C%E9%9D%A2%E7%9A%84%E5%87%A0%E7%A7%8D%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/"><span class="title">Java里面的几种引用类型</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -81,7 +83,15 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-30T09:39:14.302Z">2024-08-30</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-30T10:38:07.718Z">2024-08-30</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T13:41:14.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-30T11:00:31.346Z">2024-08-30</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>JVM</span></h1>
+        
+      </div>
+    </div>
     
   </div>
   </div><article class="md-text content"><h1 id="JVM垃圾回收"><a href="#JVM垃圾回收" class="headerlink" title="JVM垃圾回收"></a>JVM垃圾回收</h1><h3 id="什么情况会导致内存泄露？"><a href="#什么情况会导致内存泄露？" class="headerlink" title="什么情况会导致内存泄露？"></a>什么情况会导致内存泄露？</h3><p>总的来说，长生命周期的对象（如单例）持有短生命周期对象的引用，导致短生命周期对象无法被回收。</p>
@@ -150,7 +160,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/30/Java%E9%87%8C%E9%9D%A2%E7%9A%84%E5%87%A0%E7%A7%8D%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/">2024-08-30</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/07/26/%E4%B8%AA%E4%BA%BA%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%95%B4%E7%90%86/">2024-07-26</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2021/08/28/%E4%B8%AA%E4%BA%BA%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%95%B4%E7%90%86/">个人常用软件整理</a></div></section></div>
 
 
 
